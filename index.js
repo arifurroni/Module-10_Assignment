@@ -75,15 +75,16 @@ document.getElementById("h3Id5").innerHTML = letters;
 
 // ------------ Answer 06 ------------------
 
-export function titleCase(string) {
-    string = 'hello World';
-    const sentence = string.toLowerCase().split('');
-      for (let i = 0; i < sentence.length; i++) {
-          sentence[i] = sentence[i][0].toUpperCase() + sentence[i];
+function lowercaseFirstLetter(str) {
+    if (!str) {
+        return str;
     }
-     return sentence;
-
+    return str.charAt(0).toLowerCase() + str.slice(1);
 }
+
+console.log(lowercaseFirstLetter("JAVASCRIPT"));
+document.getElementById("h3Id6").innerHTML = lowercaseFirstLetter("JAVASCRIPT");
+
 
 
 
